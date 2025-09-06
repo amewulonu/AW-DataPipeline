@@ -7,7 +7,7 @@ End-to-End Data Pipeline Project using AdventureWorksDW2017. Covers Data Ingesti
 Requirements for building AW-DataPipeline: 
 --	Create a free account on Azure 
 -- SSMS & MySQL Server 
--- Download dataset AdventureWorks DW 2017 dataset from the link AdventureWorks Sample Databases - SQL Server | Microsoft Learn
+-- Download the AdventureWorks DW 2017 dataset from the link AdventureWorks Sample Databases - SQL Server | Microsoft Learn
 -- Free account on Azure Databricks 
 -- SQL Agent job & schedule.
 
@@ -16,7 +16,7 @@ Requirements for building AW-DataPipeline:
 2. Confirm all the tables and records were populated correctly with a SELECT statement on some of the tables.
 3. Develop the data dictionary for five (5) of the tables with columns such as field Name, description, DB_Field Name, Foreign Key, Foreign key table, Data type, and comments. Store the dictionary in Excel format. 
 4. Using a stored procedure, develop the following on the DW: Total sales by year, Top N customers by Sales, Sales by Product Category for a given year, Monthly sales trend for a specific Product, create a stored procedure that returns customers who have purchased more than once and sales by Territory with Date Range. 
-5. Implement aan gent job for the stored procedure sales trend and Top N customers by Sales to run every morning by 7 am using Agent jobs in SSMS. 
+5. Implement an gent job for the stored procedure sales trend and Top N customers by Sales to run every morning by 7 am using Agent jobs in SSMS. 
 6. Load the Data (Stored Procedures) into Power BI and provide the visuals.
 
 ## Tasks AW-DataPipeline (PHASE 2)
