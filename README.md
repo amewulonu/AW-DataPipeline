@@ -2,7 +2,7 @@
 End-to-End Data Pipeline Project using AdventureWorksDW2017. Covers Data Ingestion, Transformation, Loading, Governance, and Reporting with Azure Data Factory, Data Lake Gen2, Databricks, Synapse Analytics, Key Vault, Active Directory, and Power BI.
 
                
-                 ![image alt](https://github.com/amewulonu/AW-DataPipeline/blob/main/AW-DataPipeline_image.jpg?raw=true)
+                 ![AW DataPipeline](AW%20DataPipeline_image.png)
 
 
 
