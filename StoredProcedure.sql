@@ -2,8 +2,6 @@ USE AdventureWorksDW2017;
 GO
 -- 4: Using stored procedure, develop the following on the DW 
 -- Stored procedure: Total Sales by Year:
-USE AdventureWorksDW2017;
-GO
 
 CREATE PROCEDURE usp_GetTotalSalesYearly
 AS
