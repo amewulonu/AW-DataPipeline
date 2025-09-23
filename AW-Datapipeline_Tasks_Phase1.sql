@@ -272,9 +272,44 @@ EXEC usp_SalesByTerritory
     @StartDate = '2007-01-01', 
     @EndDate = '2007-12-31';
 
-
 GO
 -- 5:Implement agent job for the stored procedure sales trend and Top N customers by Sales to run every morning by 7am using Agent jobs in SSMS. 
+
+USE msdb;
+GO
+EXEC sp_add_job
+    @job_name = N'Daily_SalesTrend_TopCustomers';
+
+-- Step 1: Product Sales Trend
+EXEC sp_add_jobstep
+    @job_name = N'Daily_SalesTrend_TopCustomers',
+    @step_name = N'Run_ProductSalesTrend',
+    @subsystem = N'TSQL',
+    @database_name = N'AdventureWorksDW2017',
+    @command = N'EXEC usp_GetProductSalesTrend @ProductKey = 776;';
+
+-- Step 2: Top N Customers
+EXEC sp_add_jobstep
+    @job_name = N'Daily_SalesTrend_TopCustomers',
+    @step_name = N'Run_TopNCustomers',
+    @subsystem = N'TSQL',
+    @database_name = N'AdventureWorksDW2017',
+    @command = N'EXEC usp_GetTopNCustomersBySales @TopN = 10;',
+    @on_success_action = 1; -- go to next step
+
+-- Daily 7 AM schedule
+EXEC sp_add_schedule
+    @schedule_name = N'Daily_7AM',
+    @freq_type = 4,               -- daily
+    @freq_interval = 1,
+    @active_start_time = 070000;  -- 7:00 AM
+
+EXEC sp_attach_schedule
+    @job_name = N'Daily_SalesTrend_TopCustomers',
+    @schedule_name = N'Daily_7AM';
+
+EXEC sp_add_jobserver
+    @job_name = N'Daily_SalesTrend_TopCustomers';
 
 GO
 -- 6: Load the Data (Stored Procedures) into power BI and provide the visuals. 
