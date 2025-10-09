@@ -37,7 +37,8 @@ Azure Active Directory
 
 Implementation steps:
 Step 1 - Create a data integration link service to connect SQL Server with Azure Data Factory. Since the database is in an on-premises SQL Server, Microsoft Azure needs a way to detect the stored data and able to interact with it. 
-Step 2 - Mounting the database to perform Data Transformation using Azure Databricks. To do any kind of transformations, we need some compute power to do perform them. In Azure databricks, the 'compute' option gives us the capability to fire spark clusters and perform data transformations. Step 3 - Connecting Azure Data Factory with Azure Databricks to create data pipelines for data transformations. The data is ever-increasing, and we need a way to automate the data ingestion and transformation processes as much as possible. 
+Step 2 - Mounting the database to perform Data Transformation using Azure Databricks. To do any kind of transformations, we need some compute power to do perform them. In Azure Databricks, the 'compute' option gives us the capability to fire spark clusters and perform data transformations. 
+Step 3 - Connecting Azure Data Factory with Azure Databricks to create data pipelines for data transformations. The data is ever-increasing, and we need a way to automate the data ingestion and transformation processes as much as possible. 
 Step 4 - Load the data to Azure Synapse Analytics for further big data analytics. Azure Synapse Analytics is built on top of Azure Data Factory, so many options can be found in Synapse Analytics. In Azure Synapse Analytics, we can create databases which is not available in ADF. 
-Step 5 - Connecting PowerBI to Azure Synapse Analytics to create interactive visualizations. The Power BI desktop will be used, and the data source will be marked as Azure Synapse Analytics SQL views.
+Step 5 - Connecting Power BI to Azure Synapse Analytics to create interactive visualisations. The Power BI desktop will be used, and the data source will be marked as Azure Synapse Analytics SQL views.
 
