@@ -35,6 +35,8 @@ Azure Synapse Analytics
 Azure Key Vault (Unity Catalogue) 
 Azure Active Directory
 
+![image alt](https://github.com/amewulonu/AW-DataPipeline/blob/af4b0e8d28905a4e459188697928716b1bce4cec/RG_AdventureWorks.png)
+
 Implementation steps:
 Step 1 - Create a data integration link service to connect SQL Server with Azure Data Factory. Since the database is in an on-premises SQL Server, Microsoft Azure needs a way to detect the stored data and able to interact with it. 
 ![image alt](https://github.com/amewulonu/AW-DataPipeline/blob/6b5dd952f563268082f1c5eb2b74f70a5ef06c4a/LinkedServer_ADF.png)
