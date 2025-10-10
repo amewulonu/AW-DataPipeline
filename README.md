@@ -38,7 +38,7 @@ Azure Key Vault (Unity Catalogue)
 Azure Active Directory
 
 Azure Data Pipeline:
-![image alt](https://github.com/amewulonu/AW-DataPipeline/blob/af4b0e8d28905a4e459188697928716b1bce4cec/RG_AdventureWorks.png)
+![image alt](https://github.com/amewulonu/AW-DataPipeline/blob/f4e654baddad510328f9e57aad8ea9877ce8368d/RG_AdventureWorks.png)
 
 Implementation steps:
 - Step 1 - Create a data integration link service to connect SQL Server with Azure Data Factory. Since the database is in an on-premises SQL Server, Microsoft Azure needs a way to detect the stored data and be able to interact with it. 
